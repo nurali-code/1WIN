@@ -4,11 +4,6 @@
 
 .navbar
     list-style: none
-    &-item
-
-    &-content
-        display: none
-
     a, span
         display: block
         color: white
@@ -16,28 +11,111 @@
         font-size: 16px
         font-weight: normal
 
-    span
-        position: relative
-        z-index: 1
-        padding-right: 40px
-        cursor: pointer
-        &::after
-            content: ''
-            display: inline-block
-            width: 8px
-            height: 8px
-            border-bottom: 1px solid #fff
-            border-right: 1px solid #fff
-            position: absolute
-            top: 45%
-            right: 25px
-            transition: all ease .3s
-            transform-origin: 50% 50%
-            transform: rotate(45deg) translateY(-70%)
+    &-content
+        list-style: none
+        transition: all .2s ease
+        a
+            &:hover
+                opacity: 1
+                background-color: #243874
 
-    &-dropdown
-        &:hover
-            span
-                &::after
-                    right: 18px
-                    transform: rotate(225deg) translateY(-20%)
+    @media screen and ( min-width: 1000px )
+        span
+            position: relative
+            z-index: 1
+            padding-right: 40px
+            cursor: pointer
+            &::after
+                content: ''
+                display: inline-block
+                width: 8px
+                height: 8px
+                border-bottom: 1px solid #fff
+                border-right: 1px solid #fff
+                position: absolute
+                top: 45%
+                right: 25px
+                transition: all ease .3s
+                transform-origin: 50% 50%
+                transform: rotate(45deg) translateY(-70%)
+
+        &-content
+            position: absolute
+            border-radius: 8px
+            padding: 10px 0
+            top: 100%
+            z-index: 1000
+            min-width: 235px
+            left: 50%
+            transform: translate(-50%, 20px)
+            background-color: #0B1534
+            opacity: 0
+            visibility: hidden
+            a
+                padding: 10px
+                text-align: center
+
+        &-dropdown
+            position: relative
+            &:hover
+                span
+                    &::after
+                        right: 18px
+                        transform: rotate(225deg) translateY(-20%)
+
+                ul
+                    opacity: 1
+                    visibility: visible
+                    transform: translate(-50%, 0px)
+
+        .hidden
+            display: none
+
+    @media screen and ( max-width: 1000px )
+        display: block
+        padding: 65px 20px 20px
+        border-radius: 12px 0px 0px 0px
+        background: #232C4B
+        width: 255px
+        margin: 0 0 0 auto
+        span
+            display: none
+
+        a
+            padding: 8px 10px
+            font-weight: 600
+            &:hover
+                opacity: 1
+                background-color: #243874
+
+        &-item,
+        &-dropdown
+            // padding: 8px 0 0
+            &::after
+                content: ''
+                display: block
+                height: 1px
+                width: calc( 100% - 20px )
+                position: relative
+                left: 10px
+                margin: 8px 0
+                background: linear-gradient(90deg, rgba(99, 99, 99, 0.50) 0.83%, rgba(99, 99, 99, 0.00) 100%)
+
+        .hidden
+            font-size: 12px
+            font-style: normal
+            font-weight: 400
+            color: #F8F8F8
+            padding: 40px 0 0 10px
+            line-height: normal
+
+@media screen and ( max-width: 1000px )
+    nav
+        padding-top: 30px
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        height: 100vh
+        height: 100lvh
+        background: rgba(9, 15, 33, 0.85)
