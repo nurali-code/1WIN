@@ -1,6 +1,8 @@
 .header
     background-color: #090F21
     padding: 21px 0
+    position: relative
+    z-index: 9999
 
 .navbar
     list-style: none
@@ -78,6 +80,11 @@
         background: #232C4B
         width: 255px
         margin: 0 0 0 auto
+        transition: all ease .3s
+        height: calc( 100vh - 30px )
+        height: calc( 100lvh - 30px )
+        transform: translateX(100px)
+        overflow-y: scroll
         span
             display: none
 
@@ -109,7 +116,14 @@
             padding: 40px 0 0 10px
             line-height: normal
 
+@media screen and ( min-width: 1000px )
+    .btn__menu
+        display: none
+
 @media screen and ( max-width: 1000px )
+    .header
+        padding: 40px 0 10px
+
     nav
         padding-top: 30px
         position: fixed
@@ -119,3 +133,53 @@
         height: 100vh
         height: 100lvh
         background: rgba(9, 15, 33, 0.85)
+        opacity: 0
+        visibility: hidden
+        transition: all ease .3s
+        &.active
+            opacity: 1
+            visibility: visible
+            .navbar
+                transform: translateX(0)
+
+    .logo
+        width: 70px
+
+    .btn__menu
+        width: 30px
+        height: 30px
+        position: relative
+        z-index: 99999
+        span
+            display: block
+            margin: 0 auto
+            width: 21px
+            height: 2px
+            background-color: #fff
+            position: relative
+            z-index: 1
+            transition: all ease .3s
+            &::before,
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                right: 3px
+                background-color: #fff
+                height: 2px
+                position: absolute
+                top: -6px
+                right: 0
+                transition: all ease .3s
+            &::after
+                top: 6px
+
+        &.active
+            span
+                background-color: transparent
+                &::before
+                    transform: rotate(45deg)
+                    top: 0
+                &::after
+                    transform: rotate(-45deg)
+                    top: 0

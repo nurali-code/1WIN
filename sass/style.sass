@@ -4,5 +4,152 @@
 @import 'slick'
 @import 'header'
 
-.hero
-    
+.text
+    &__xl
+        font-size: 16px
+
+    &__md
+        font-size: 14px
+
+    &__sm
+        font-size: 12px
+
+.main
+    padding: 33px 0 40px
+    h1
+        font-size: 23px
+        font-weight: 600
+        margin: 0
+
+    &__img
+        width: 230px
+
+    &-header
+        width: 60%
+        align-items: flex-start
+        gap: 32px
+        justify-content: flex-start
+        margin-top: 10px
+        .stars
+            margin-top: 10px
+
+    &-col
+        width: 38%
+
+.slider
+    &-section
+        .heading
+
+    img
+        display: block
+        border-radius: 8px
+
+.review
+    padding: 20px 16px
+    border-radius: 8px
+    background: #F8F8F8
+    width: 320px
+    img
+        margin-bottom: 5px
+
+    b
+        color: #000
+        display: block
+        font-weight: 600
+        margin-bottom: 4px
+
+    &-wrap
+        align-items: flex-start
+
+.news
+    width: 320px
+    img 
+        width: 100%
+        aspect-ratio: 5/3.5
+        object-fit: cover
+        display: block
+        border-radius: 24px
+        margin-bottom: 15px
+
+    b 
+        font-size: 13px
+        display: block
+        margin-bottom: 6px
+
+    a 
+        font-size: 12px
+
+    &-wrap 
+        gap: 20px 
+        align-items: flex-start
+
+
+@media screen and ( max-width: 1000px )
+    .text
+        &__xl
+            font-size: 16px
+        &__md
+            font-size: 13px
+
+    .main
+        padding: 10px 0 30px
+        .text
+            &__xl,
+            &__md
+                font-size: 12px
+        &__img
+            width: 110px
+
+        &-content
+            display: block
+
+        &-header
+            width: 100%
+            gap: 10px
+            margin-top: 4px
+            .stars
+                width: 82px
+                margin-top: 25px
+                margin-right: 5px
+
+        h1
+            font-size: 18px
+
+        &-col
+            width: 100%
+            border-top: 1px solid rgba(99, 99, 99, 0.50)
+            padding-top: 10px
+            .heading
+                margin-bottom: 3px
+
+    .slider
+        &-slide
+            width: 290px
+            min-width: 290px
+
+        &-section
+            padding-bottom: 30px
+            .heading
+                margin-bottom: 14px
+
+    .review
+        width: 290px
+        min-width: 290px
+        padding: 13px 12px
+
+        img 
+            width: 125px
+
+    .news
+        width: 230px
+        min-width: 230px
+        &-wrap 
+            gap: 6px
+
+        img 
+            margin-bottom: 10px
+
+        
+
+        b 
+            font-size: 14px

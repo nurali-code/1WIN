@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    $('.btn-menu').on('click', function (e) {
-        $('.header-navbar, body, .header-nav, .btn-menu').toggleClass('active');
-    })
-
+    $('.btn__menu').on('click', () => { $('nav, .btn__menu').toggleClass('active'); })
+    $('.dropdown-btn').on('click', function (e) { $(this).toggleClass('active').next('.dropdown-content').slideToggle(300); })
 });
 
