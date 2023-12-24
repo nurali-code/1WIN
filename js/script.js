@@ -30,6 +30,12 @@ $(document).ready(function () {
 
     }
 
+    $('.copyText').on('click', function () {
+        var dataToCopy = $(this).data('copy');
+        navigator.clipboard.writeText(dataToCopy)
+            .then(function () { alert('Промокод скопирован: ' + dataToCopy); })
+            .catch(function (err) { console.error('Не удалось скопировать промокод: ', err); });
+    })
 
 });
 
