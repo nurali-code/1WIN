@@ -61,6 +61,51 @@
     &-wrap
         align-items: flex-start
 
+    &-header
+        margin-bottom: 20px
+
+    &__heading
+        color: #4C4C50
+        b
+            color: #4C4C50
+            font-size: 60px
+            font-weight: 600
+            margin-right: 10px
+
+    &-wrapper 
+        align-items: center
+        max-width: 550px
+
+    &-rate
+        width: 200px
+        align-items: stretch
+        margin: 0 auto 20px
+
+        img
+            display: block
+            width: 35%
+        
+        .col
+            flex-direction: column
+            justify-content: space-between
+            width: 65%
+            padding: 6px 0 6px 10px
+
+        &__text
+            width: 70%
+            font-size: 12px
+            font-weight: 400
+            margin: 5px 0 0 auto 
+            text-align: right
+
+    &-rage
+        width: 100%
+        background-color: #EFEFF4
+        span
+            display: block
+            height: 1px
+            background-color: #636366
+
 .news
     width: 320px
     img
@@ -173,5 +218,14 @@
         min-width: 170px
         img
             margin-bottom: 10px
+
+    .review
+        &-rate
+            width: 175px
+        &__heading
+            text-align: center
+            b 
+                display: block
+                margin: 0 auto 
 
 @import 'footer'
