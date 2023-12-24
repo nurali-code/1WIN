@@ -16,6 +16,24 @@
         font-weight: 400
         padding-right: 10px
         margin-right: 10px
-        border-right: 1px solid #1D1D1F
         &:hover
             text-decoration: underline
+
+        @media screen and ( min-width: 1000px )
+            border-right: 1px solid #1D1D1F
+
+    @media screen and ( max-width: 1000px )
+        padding: 20px 0 
+        p
+            span
+                float: none
+                display: block
+                margin-bottom: 10px
+
+        nav
+            a
+                display: block
+                margin: 0 0 4px
+                &::after
+                    content: '|'
+                    margin: 0 10px

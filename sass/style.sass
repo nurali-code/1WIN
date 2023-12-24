@@ -37,12 +37,19 @@
         width: 38%
 
 .slider
+    flex-wrap: nowrap
     &-section
-        .heading
 
     img
         display: block
+        margin: 0 auto
         border-radius: 8px
+
+    @media screen and ( min-width: 1000px )
+        &-slide
+            display: none
+            &:nth-child(1),&:nth-child(2),&:nth-child(3)
+                display: block
 
 .review
     padding: 20px 16px
@@ -72,7 +79,7 @@
             font-weight: 600
             margin-right: 10px
 
-    &-wrapper 
+    &-wrapper
         align-items: center
         max-width: 550px
 
@@ -84,7 +91,7 @@
         img
             display: block
             width: 35%
-        
+
         .col
             flex-direction: column
             justify-content: space-between
@@ -95,7 +102,7 @@
             width: 70%
             font-size: 12px
             font-weight: 400
-            margin: 5px 0 0 auto 
+            margin: 5px 0 0 auto
             text-align: right
 
     &-rage
@@ -213,6 +220,9 @@
         b
             font-size: 14px
 
+        .link
+            margin-top: 0
+
     .more_game
         width: 170px
         min-width: 170px
@@ -224,8 +234,8 @@
             width: 175px
         &__heading
             text-align: center
-            b 
+            b
                 display: block
-                margin: 0 auto 
+                margin: 0 auto
 
 @import 'footer'

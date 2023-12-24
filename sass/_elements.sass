@@ -94,25 +94,38 @@ ul
         li
             background-image: url('../img/check.svg')
             background-repeat: no-repeat
-            background-position: center left 
+            background-position: center left
             padding: 2.5px 17px
 
 .box
+    &-parent
+        max-width: 600px
     .wrap
         a
+            display: block
             width: 49%
 
     &-wrap
         max-width: 340px
+        gap: 0 !important
+        justify-content: space-between !important
         padding: 2px
         border-radius: 8px
         background: #F6F6F6
         margin: 0 0 12px
 
-    p
+    &__code
         padding: 12px 16px
         margin: 0
         font-weight: 500
+
+    &__descr
+        max-width: 340px
+        color: #636366 
+        font-size: 12px
+        padding: 0 !important
+        font-weight: 400
+        margin-bottom: 6px 
 
 .btn,
 .btn_2,
@@ -259,15 +272,23 @@ article
             max-width: 85%
             margin: 0 auto
 
-
     .wrapper
         align-items: flex-start
         justify-content: space-between
-        ul 
+        ul
             max-width: 25%
 
-    mark 
+    mark
         display: block
+
+    .box
+        &-parent
+            max-width: 490px
+
+        a
+            margin-bottom: 6px
+            width: 100%
+            max-width: 340px
 
 ol
     padding-left: 20px
@@ -277,6 +298,33 @@ ol
         font-style: normal
         font-weight: 400
         padding: 2.5px 0
+
+table
+    font-weight: 400
+    border-radius: 8px
+    overflow: hidden
+    margin: 40px 0
+    th,td
+        border-bottom: 1px solid rgba(217, 217, 217, 0.45)
+    td
+        color: #000
+        padding: 22px
+        font-size: 12px
+        font-weight: 500
+        background-color: rgba(246, 246, 246, 0.85)
+        &:first-child
+            text-align: center
+            color: #636363
+            min-width: 175px
+            border-right: 1px solid rgba(217, 217, 217, 0.45)
+
+    th
+        padding: 7px
+        font-weight: 400
+        font-size: 13px
+        background-color: rgba(217, 217, 217, 0.45)
+        &:first-child
+            border-right: 1px solid rgba(217, 217, 217, 0.45)
 
 @media screen and ( max-width: 1000px )
     .heading
@@ -292,13 +340,20 @@ ol
     .box
         margin-bottom: 20px
         max-width: 290px
+        &-parent 
+            max-width: 290px !important
+            .h2 
+                font-size: 14px
+
         &-wrap
             margin-bottom: 5px
-        p
+        
+        &__code
             padding: 11px 15px
             font-size: 14px
             font-weight: 500
             color: #000
+
         .wrap
             a
                 width: 100%
@@ -322,7 +377,8 @@ ol
     .dropdown
         margin-bottom: 5px
         &-btn
-            padding: 10px 50px 10px 16px
+            padding: 14px 50px 14px 16px
+        
         &-wrap
             .col
                 width: 100%
@@ -334,14 +390,22 @@ ol
         .wrap
             align-items: stretch
 
-        .wrapper 
+        .wrapper
             display: block
 
-        ul 
+        ul
             max-width: 100% !important
 
-        h2, .h2 
+        h2, .h2
             font-size: 18px
 
     figure
         width: 290px
+
+    table 
+        width: 410px
+        margin: 30px 0
+        td 
+            padding: 22px 10px
+            &:first-child
+                min-width: 140px
