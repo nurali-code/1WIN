@@ -101,7 +101,7 @@ ul
 .box
     &-parent
         max-width: 600px
-    
+
     .wrap
         a
             display: block
@@ -123,11 +123,11 @@ ul
 
     &__descr
         max-width: 340px
-        color: #636366 
+        color: #636366
         font-size: 12px
         padding: 0 !important
         font-weight: 400
-        margin-bottom: 6px 
+        margin-bottom: 6px
 
 .btn,
 .btn_2,
@@ -179,16 +179,16 @@ input, textarea, select
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
-    
+
 .title-wrap
     border-top: 1px solid rgba(99,99,99,.5)
     h2, .h2, .heading
         padding-top: 10px
-        width: unset 
-        border: none 
+        width: unset
+        border: none
         margin-bottom: 20px
 
-    .link 
+    .link
         margin-bottom: 15px
 
 .dropdown
@@ -255,6 +255,7 @@ figure
     margin: 0 0 40px
     width: 320px
     img
+        display: block
         border-radius: 8px
         margin-bottom: 10px
 
@@ -337,6 +338,38 @@ table
         &:first-child
             border-right: 1px solid rgba(217, 217, 217, 0.45)
 
+.figure
+    position: relative
+    z-index: 1
+    margin-bottom: 10px
+    &::before
+        content: ''
+        border-radius: 8px
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: rgba(0, 0, 0, .5)
+
+    img
+        margin: 0
+
+.btnPlay
+    width: 75px
+    height: 75px
+    background-image: url('../img/play.svg')
+    background-repeat: no-repeat
+    background-position: center center
+    position: absolute
+    z-index: 100
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &:active
+        transform: translate(-50%, -50%) scale(.95)
+
 @media screen and ( max-width: 1000px )
     .heading
         font-size: 14px
@@ -351,14 +384,14 @@ table
     .box
         margin-bottom: 20px
         max-width: 290px
-        &-parent 
+        &-parent
             max-width: 290px !important
-            .h2 
+            .h2
                 font-size: 14px
 
         &-wrap
             margin-bottom: 5px
-        
+
         &__code
             padding: 11px 15px
             font-size: 14px
@@ -389,7 +422,7 @@ table
         margin-bottom: 5px
         &-btn
             padding: 14px 50px 14px 16px
-        
+
         &-wrap
             .col
                 width: 100%
@@ -413,10 +446,10 @@ table
     figure
         width: 290px
 
-    table 
+    table
         width: 410px
         margin: 30px 0
-        td 
+        td
             padding: 22px 10px
             &:first-child
                 min-width: 140px

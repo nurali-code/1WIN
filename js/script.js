@@ -5,9 +5,18 @@ $(document).ready(function () {
     $(document).on('click', function (e) {
         if (!(($(e.target).parents('.navbar').length) ||
             ($(e.target).parents('btn__menu').length) ||
+            ($(e.target).parents('modal-content').length) ||
+            ($(e.target).hasClass('btnPlay')) ||
             ($(e.target).hasClass('btn__menu')) ||
             ($(e.target).hasClass('navbar'))
-        )) { $('body, .header nav, .btn__menu').removeClass('active'); }
+        )) {
+            $('#video_modal').fadeOut(300);
+            $('body, .header nav, .btn__menu').removeClass('active');
+        }
+    });
+
+    $(document).on('click', '.btnPlay', function (e) {
+        $('#video_modal').fadeIn(300);
     });
 
     if (window.innerWidth >= 1000) {
