@@ -63,7 +63,7 @@
 
 .news
     width: 320px
-    img 
+    img
         width: 100%
         aspect-ratio: 5/3.5
         object-fit: cover
@@ -71,18 +71,36 @@
         border-radius: 24px
         margin-bottom: 15px
 
-    b 
+    b
         font-size: 13px
         display: block
         margin-bottom: 6px
 
-    a 
+    a
         font-size: 12px
 
-    &-wrap 
-        gap: 20px 
+    &-wrap
+        gap: 20px
         align-items: flex-start
 
+.more_game
+    display: inline-block
+    width: 150px
+    img
+        display: block
+        width: 100%
+        border-radius: 24px
+        margin: 0 0 30px
+
+    p
+        color: #636366
+        font-size: 12px
+        font-weight: 400
+        b 
+            display: block
+            margin-bottom: 6px
+
+@import 'footer'
 
 @media screen and ( max-width: 1000px )
     .text
@@ -137,19 +155,17 @@
         min-width: 290px
         padding: 13px 12px
 
-        img 
+        img
             width: 125px
 
     .news
         width: 230px
         min-width: 230px
-        &-wrap 
+        &-wrap
             gap: 6px
 
-        img 
+        img
             margin-bottom: 10px
 
-        
-
-        b 
+        b
             font-size: 14px
